@@ -15,7 +15,7 @@ export default function Home() {
               Sign In
             </a>
             <a
-              href="mailto:info@leadssnap.com?subject=LeadsSnap%20Invite%20Request"
+              href="mailto:support@leadssnap.com?subject=LeadsSnap%20Invite%20Request"
               className="h-9 px-4 bg-accent text-white text-sm font-medium rounded-lg flex items-center hover:bg-accent/90 transition-colors"
             >
               Request Invite
@@ -43,7 +43,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="mailto:info@leadssnap.com?subject=LeadsSnap%20Invite%20Request"
+              href="mailto:support@leadssnap.com?subject=LeadsSnap%20Invite%20Request"
               className="h-12 px-8 bg-accent text-white font-semibold rounded-xl flex items-center justify-center hover:bg-accent/90 transition-colors text-base"
             >
               Request Invite
@@ -196,7 +196,7 @@ export default function Home() {
             we&apos;ll get you set up before your next event.
           </p>
           <a
-            href="mailto:info@leadssnap.com?subject=LeadsSnap%20Invite%20Request"
+            href="mailto:support@leadssnap.com?subject=LeadsSnap%20Invite%20Request"
             className="inline-flex h-12 px-8 bg-accent text-white font-semibold rounded-xl items-center hover:bg-accent/90 transition-colors text-base"
           >
             Request Invite
