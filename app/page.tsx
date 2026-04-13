@@ -208,10 +208,7 @@ export default function Home() {
       <footer className="py-8 px-6 border-t border-border">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-sm text-muted">
-            &copy; 2026 LeadsSnap by{" "}
-            <a href="https://outpacecx.com" className="text-foreground hover:text-accent transition-colors">
-              Outpace CX
-            </a>
+            &copy; 2026 LeadsSnap
           </div>
           <a
             href="https://app.leadssnap.com"
