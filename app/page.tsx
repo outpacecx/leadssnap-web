@@ -314,12 +314,26 @@ export default function Home() {
           <div className="text-sm text-muted">
             &copy; 2026 LeadsSnap
           </div>
-          <a
-            href="https://app.leadssnap.com"
-            className="text-sm text-accent hover:underline"
-          >
-            Open App
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://app.leadssnap.com/privacy"
+              className="text-sm text-muted hover:text-foreground transition-colors"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="https://app.leadssnap.com/terms"
+              className="text-sm text-muted hover:text-foreground transition-colors"
+            >
+              Terms
+            </a>
+            <a
+              href="https://app.leadssnap.com"
+              className="text-sm text-accent hover:underline"
+            >
+              Open App
+            </a>
+          </div>
         </div>
       </footer>
     </div>
