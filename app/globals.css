@@ -7,8 +7,8 @@ html {
 }
 
 body {
-  background: #0F0F0F;
-  color: #FFFFFF;
+  background: #FFFFFF;
+  color: #111111;
 }
 
 @keyframes fade-in-up {

@@ -31,14 +31,14 @@ export default function Home() {
             <span className="w-1.5 h-1.5 bg-accent rounded-full" />
             Invite-only beta
           </div>
-          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
+          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-foreground">
             Capture leads in seconds,
             <br />
             <span className="text-accent">not minutes.</span>
           </h1>
           <p className="text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-10">
             Snap a photo of any business card or event badge. AI extracts the
-            contact, enriches missing details, scores the lead, and drafts your
+            contact, enriches company intel, scores the lead, and drafts your
             follow-up — all before you leave the booth.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -59,9 +59,9 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-20 px-6">
+      <section id="how-it-works" className="py-20 px-6 bg-surface/50">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-foreground">
             Three steps. Zero typing.
           </h2>
           <p className="text-muted text-center mb-14 max-w-xl mx-auto">
@@ -77,7 +77,7 @@ export default function Home() {
                 </svg>
               </div>
               <div className="text-xs text-accent font-semibold uppercase tracking-wider mb-2">Step 1</div>
-              <h3 className="text-xl font-semibold mb-2">Scan</h3>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Scan</h3>
               <p className="text-muted text-sm">
                 Snap a photo of a business card, event badge, or LinkedIn QR code. Works with your camera or photo gallery.
               </p>
@@ -90,9 +90,9 @@ export default function Home() {
                 </svg>
               </div>
               <div className="text-xs text-accent font-semibold uppercase tracking-wider mb-2">Step 2</div>
-              <h3 className="text-xl font-semibold mb-2">Enrich</h3>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Enrich</h3>
               <p className="text-muted text-sm">
-                AI reads the card, fills in missing emails, LinkedIn profiles, and company details. Then scores the lead against your ICP.
+                AI fills in missing emails, LinkedIn profiles, and company intel — industry, revenue, business model. Then scores the lead against your ICP.
               </p>
             </div>
             {/* Step 3 */}
@@ -103,7 +103,7 @@ export default function Home() {
                 </svg>
               </div>
               <div className="text-xs text-accent font-semibold uppercase tracking-wider mb-2">Step 3</div>
-              <h3 className="text-xl font-semibold mb-2">Export</h3>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Export</h3>
               <p className="text-muted text-sm">
                 Export to Google Sheets, save to phone contacts, or draft a follow-up email with one tap. Your leads, your way.
               </p>
@@ -113,9 +113,9 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section id="features" className="py-20 px-6 bg-surface/50">
+      <section id="features" className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-foreground">
             Everything you need at events
           </h2>
           <p className="text-muted text-center mb-14 max-w-xl mx-auto">
@@ -124,13 +124,13 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <FeatureCard
               icon={<svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /></svg>}
-              title="AI Card Scanning"
-              description="Claude AI reads business cards with near-perfect accuracy. Extracts names, titles, emails, phones — even messy designs."
+              title="AI Card & Badge Scanning"
+              description="Claude AI reads business cards and event badges with near-perfect accuracy. QR codes on badges are decoded and merged automatically."
             />
             <FeatureCard
-              icon={<svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z" /></svg>}
-              title="Event Badge OCR"
-              description="Scan conference badges and lanyards. QR codes are decoded automatically and merged with the visible text."
+              icon={<svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456Z" /></svg>}
+              title="Company Intel"
+              description="AI enriches every lead with industry, B2B/B2C type, estimated revenue, and a company bio — so you know who you're talking to."
             />
             <FeatureCard
               icon={<svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" /></svg>}
@@ -138,28 +138,43 @@ export default function Home() {
               description="Define your Ideal Customer Profile. Every lead gets scored 1-5 automatically so you know who to follow up with first."
             />
             <FeatureCard
-              icon={<svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0-8.953 5.468a1.5 1.5 0 0 1-1.594 0L2.25 6.75" /></svg>}
-              title="AI Email Drafts"
-              description="Generate a personalized follow-up email with one tap. Reference the event, your notes, and their role — then send."
+              icon={<svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" /></svg>}
+              title="Qualifier Questions"
+              description="Set up custom questions per event — budget, timeline, decision authority. Answer them after each scan to qualify leads on the spot."
             />
             <FeatureCard
-              icon={<svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 0 1-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0 1 12 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M10.875 12h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125m-1.125-1.125h7.5c.621 0 1.125-.504 1.125-1.125M12 12c0 .621.504 1.125 1.125 1.125m-1.125-1.125c0 .621-.504 1.125-1.125 1.125" /></svg>}
-              title="Google Sheets Export"
-              description="One tap to export your leads. Auto-creates a new sheet or appends to an existing one. Ready for your CRM import."
+              icon={<svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0-8.953 5.468a1.5 1.5 0 0 1-1.594 0L2.25 6.75" /></svg>}
+              title="AI Email Drafts"
+              description="Generate a personalized follow-up email with one tap. References the event, your notes, and their role — then send from your inbox."
+            />
+            <FeatureCard
+              icon={<svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" /></svg>}
+              title="Export Everywhere"
+              description="Google Sheets, phone contacts, vCard files. One tap to export with all fields including company intel and qualifier responses."
             />
             <FeatureCard
               icon={<svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" /></svg>}
               title="Offline Mode"
               description="Bad WiFi at the venue? No problem. Scans queue locally and sync automatically when you're back online."
             />
+            <FeatureCard
+              icon={<svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" /><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" /></svg>}
+              title="Analytics Dashboard"
+              description="See leads per event, scan frequency, and score distribution at a glance. Know which events deliver the best leads."
+            />
+            <FeatureCard
+              icon={<svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 3.75 9.375v-4.5ZM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 0 1-1.125-1.125v-4.5ZM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 13.5 9.375v-4.5Z" /><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 6.75h.75v.75h-.75v-.75ZM6.75 16.5h.75v.75h-.75v-.75ZM16.5 6.75h.75v.75h-.75v-.75ZM13.5 13.5h.75v.75h-.75v-.75ZM13.5 19.5h.75v.75h-.75v-.75ZM19.5 13.5h.75v.75h-.75v-.75ZM19.5 19.5h.75v.75h-.75v-.75ZM16.5 16.5h.75v.75h-.75v-.75Z" /></svg>}
+              title="Digital Business Card"
+              description="Create your own shareable profile with a vCard QR code. Share your card link at events — no paper needed."
+            />
           </div>
         </div>
       </section>
 
       {/* Built for Events */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-surface/50">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-foreground">
             Built for the event floor
           </h2>
           <p className="text-muted text-lg mb-10 max-w-2xl mx-auto">
@@ -169,15 +184,15 @@ export default function Home() {
             again.
           </p>
           <div className="grid sm:grid-cols-3 gap-6 text-left">
-            <div className="p-5 bg-surface border border-border rounded-xl">
+            <div className="p-5 bg-background border border-border rounded-xl">
               <div className="text-2xl font-bold text-accent mb-1">&lt;10s</div>
               <div className="text-sm text-muted">Card to qualified lead</div>
             </div>
-            <div className="p-5 bg-surface border border-border rounded-xl">
+            <div className="p-5 bg-background border border-border rounded-xl">
               <div className="text-2xl font-bold text-accent mb-1">3 modes</div>
               <div className="text-sm text-muted">Cards, badges, QR codes</div>
             </div>
-            <div className="p-5 bg-surface border border-border rounded-xl">
+            <div className="p-5 bg-background border border-border rounded-xl">
               <div className="text-2xl font-bold text-accent mb-1">Works offline</div>
               <div className="text-sm text-muted">Sync when back online</div>
             </div>
@@ -186,9 +201,9 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-surface/50">
+      <section className="py-20 px-6">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">
             Ready to capture leads smarter?
           </h2>
           <p className="text-muted text-lg mb-8">
@@ -234,7 +249,7 @@ function FeatureCard({
   return (
     <div className="p-6 bg-surface border border-border rounded-xl hover:border-accent/20 transition-colors">
       <div className="text-accent mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold mb-2">{title}</h3>
+      <h3 className="text-lg font-semibold mb-2 text-foreground">{title}</h3>
       <p className="text-sm text-muted leading-relaxed">{description}</p>
     </div>
   );

@@ -8,12 +8,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0F0F0F",
-        surface: "#1A1A1A",
-        border: "#2A2A2A",
+        background: "#FFFFFF",
+        surface: "#F5F5F5",
+        border: "#E5E5E5",
         accent: "#2563EB",
-        foreground: "#FFFFFF",
-        muted: "#9CA3AF",
+        foreground: "#111111",
+        muted: "#6B7280",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
