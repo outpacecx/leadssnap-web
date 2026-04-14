@@ -30,3 +30,21 @@ body {
 .animate-delay-200 { animation-delay: 0.2s; }
 .animate-delay-300 { animation-delay: 0.3s; }
 .animate-delay-400 { animation-delay: 0.4s; }
+
+.phone-tilt {
+  transform: perspective(1200px) rotateY(-12deg) rotateX(4deg) scale(1);
+  transition: transform 0.4s ease;
+}
+.phone-tilt:hover {
+  transform: perspective(1200px) rotateY(-4deg) rotateX(1deg) scale(1.02);
+}
+
+.mini-phone-tilt-1 {
+  transform: perspective(800px) rotateY(-8deg) rotateX(3deg);
+}
+.mini-phone-tilt-2 {
+  transform: perspective(800px) rotateY(0deg) rotateX(2deg);
+}
+.mini-phone-tilt-3 {
+  transform: perspective(800px) rotateY(8deg) rotateX(3deg);
+}

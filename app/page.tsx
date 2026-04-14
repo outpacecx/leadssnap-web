@@ -59,7 +59,7 @@ export default function Home() {
           </div>
 
           {/* Hero phone mockup */}
-          <div className="flex-shrink-0 hidden sm:block">
+          <div className="flex-shrink-0 hidden sm:block phone-tilt">
             <PhoneMockup>
               {/* Scan screen */}
               <div className="p-4">
@@ -76,26 +76,33 @@ export default function Home() {
                   <div className="text-xs font-medium text-gray-700">Upload a photo</div>
                   <div className="text-[10px] text-gray-400 mt-0.5">Tap to choose from gallery</div>
                 </div>
-                {/* Fake enriched result preview */}
+                {/* Enriched result preview */}
                 <div className="bg-gray-50 rounded-xl p-3 border border-gray-100">
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] font-bold">JD</div>
+                  <div className="flex items-center gap-2 mb-2.5">
+                    <div className="w-9 h-9 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] font-bold">JD</div>
                     <div>
                       <div className="text-xs font-semibold text-gray-900">Jane Doe</div>
                       <div className="text-[10px] text-gray-500">VP Sales at Acme Corp</div>
                     </div>
                     <div className="ml-auto">
-                      <div className="w-6 h-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-[10px] font-bold">5</div>
+                      <div className="w-7 h-7 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-[10px] font-bold">5</div>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-1.5">
-                    <div className="text-[9px] text-gray-400">Email</div>
-                    <div className="text-[9px] text-gray-700">jane@acme.com</div>
-                    <div className="text-[9px] text-gray-400">Industry</div>
-                    <div className="text-[9px] text-gray-700">SaaS / B2B</div>
-                    <div className="text-[9px] text-gray-400">Revenue</div>
-                    <div className="text-[9px] text-gray-700">$50M-$100M</div>
+                  <div className="space-y-1.5">
+                    <div className="flex justify-between items-center"><span className="text-[9px] text-gray-400">Email</span><span className="text-[9px] text-gray-700">jane@acme.com</span></div>
+                    <div className="flex justify-between items-center"><span className="text-[9px] text-gray-400">Phone</span><span className="text-[9px] text-gray-700">+1 (555) 234-5678</span></div>
+                    <div className="flex justify-between items-center"><span className="text-[9px] text-gray-400">Mobile</span><span className="text-[9px] text-gray-700">+1 (555) 987-6543</span></div>
+                    <div className="h-px bg-gray-200 my-1" />
+                    <div className="text-[9px] text-gray-400 uppercase tracking-wider font-medium">Company Intel</div>
+                    <div className="flex justify-between items-center"><span className="text-[9px] text-gray-400">Industry</span><span className="text-[9px] text-gray-700">SaaS / B2B</span></div>
+                    <div className="flex justify-between items-center"><span className="text-[9px] text-gray-400">Revenue</span><span className="text-[9px] text-gray-700">$50M-$100M</span></div>
+                    <div className="text-[9px] text-gray-500 leading-relaxed mt-1">Enterprise CRM platform for mid-market sales teams. Revenue from annual SaaS subscriptions.</div>
                   </div>
+                </div>
+                {/* Action buttons */}
+                <div className="flex gap-1.5 mt-3">
+                  <div className="flex-1 h-7 bg-blue-600 rounded-lg text-[9px] text-white flex items-center justify-center font-medium">Save to Contacts</div>
+                  <div className="flex-1 h-7 bg-gray-100 rounded-lg text-[9px] text-gray-600 flex items-center justify-center">Draft Email</div>
                 </div>
               </div>
             </PhoneMockup>
@@ -115,13 +122,16 @@ export default function Home() {
           <div className="grid sm:grid-cols-3 gap-10">
             {/* Step 1 - Scan */}
             <div className="text-center">
-              <div className="mb-6 flex justify-center">
+              <div className="mb-6 flex justify-center mini-phone-tilt-1">
                 <MiniPhone>
-                  <div className="p-2">
-                    <div className="bg-gray-800 rounded-lg aspect-[4/3] flex items-center justify-center mb-2">
+                  <div className="p-2.5">
+                    <div className="text-[8px] font-bold text-gray-900 mb-1.5">Scan Lead</div>
+                    <div className="bg-gray-800 rounded-lg aspect-[4/3] flex items-center justify-center mb-2 relative">
                       <div className="w-10 h-10 border-2 border-white/40 rounded-lg" />
+                      <div className="absolute bottom-1 left-1/2 -translate-x-1/2 text-[6px] text-white/60">Point at card</div>
                     </div>
-                    <div className="h-5 bg-blue-600 rounded text-[8px] text-white flex items-center justify-center font-medium">Capture</div>
+                    <div className="h-6 bg-blue-600 rounded-lg text-[8px] text-white flex items-center justify-center font-medium">Capture</div>
+                    <div className="h-5 bg-gray-100 rounded-lg text-[7px] text-gray-500 flex items-center justify-center mt-1.5">Upload instead</div>
                   </div>
                 </MiniPhone>
               </div>
@@ -133,23 +143,26 @@ export default function Home() {
             </div>
             {/* Step 2 - Enrich */}
             <div className="text-center">
-              <div className="mb-6 flex justify-center">
+              <div className="mb-6 flex justify-center mini-phone-tilt-2">
                 <MiniPhone>
-                  <div className="p-2 space-y-1.5">
+                  <div className="p-2.5 space-y-1.5">
+                    <div className="text-[8px] font-bold text-gray-900 mb-1">Lead Detail</div>
                     <div className="flex items-center gap-1.5">
-                      <div className="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[7px] font-bold">JD</div>
+                      <div className="w-7 h-7 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[7px] font-bold">JD</div>
                       <div>
                         <div className="text-[8px] font-semibold text-gray-900">Jane Doe</div>
-                        <div className="text-[7px] text-gray-400">VP Sales</div>
+                        <div className="text-[7px] text-gray-400">VP Sales at Acme</div>
                       </div>
+                      <div className="ml-auto w-5 h-5 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-[7px] font-bold">5</div>
                     </div>
                     <div className="h-px bg-gray-100" />
+                    <div className="text-[6px] text-gray-400 uppercase tracking-wider font-medium">Company Intel</div>
                     <div className="space-y-1">
                       <div className="flex justify-between"><span className="text-[7px] text-gray-400">Industry</span><span className="text-[7px] text-gray-700">SaaS</span></div>
                       <div className="flex justify-between"><span className="text-[7px] text-gray-400">Type</span><span className="text-[7px] text-gray-700">B2B</span></div>
                       <div className="flex justify-between"><span className="text-[7px] text-gray-400">Revenue</span><span className="text-[7px] text-gray-700">$50M+</span></div>
-                      <div className="flex justify-between"><span className="text-[7px] text-gray-400">Score</span><span className="text-[7px] font-bold text-green-600">5/5</span></div>
                     </div>
+                    <div className="h-5 bg-gray-100 rounded text-[7px] text-blue-600 flex items-center justify-center font-medium mt-1">Enrich with AI</div>
                   </div>
                 </MiniPhone>
               </div>
@@ -161,18 +174,20 @@ export default function Home() {
             </div>
             {/* Step 3 - Export */}
             <div className="text-center">
-              <div className="mb-6 flex justify-center">
+              <div className="mb-6 flex justify-center mini-phone-tilt-3">
                 <MiniPhone>
-                  <div className="p-2 space-y-1.5">
-                    <div className="h-5 bg-blue-600 rounded text-[7px] text-white flex items-center justify-center font-medium gap-1">
+                  <div className="p-2.5 space-y-1.5">
+                    <div className="text-[8px] font-bold text-gray-900 mb-1">Export</div>
+                    <div className="h-6 bg-blue-600 rounded-lg text-[7px] text-white flex items-center justify-center font-medium gap-1">
                       <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" /></svg>
                       Export to Sheets
                     </div>
-                    <div className="h-5 bg-gray-100 rounded text-[7px] text-gray-600 flex items-center justify-center font-medium">Save to Contacts</div>
-                    <div className="h-5 bg-gray-100 rounded text-[7px] text-gray-600 flex items-center justify-center font-medium">Draft Email</div>
-                    <div className="mt-1 bg-green-50 border border-green-200 rounded p-1">
-                      <div className="text-[7px] text-green-700 text-center">12 leads exported</div>
+                    <div className="h-5 bg-gray-100 rounded-lg text-[7px] text-gray-600 flex items-center justify-center font-medium">Save to Contacts</div>
+                    <div className="h-5 bg-gray-100 rounded-lg text-[7px] text-gray-600 flex items-center justify-center font-medium">Draft Follow-up Email</div>
+                    <div className="mt-1.5 bg-green-50 border border-green-200 rounded-lg p-1.5">
+                      <div className="text-[7px] text-green-700 text-center font-medium">12 leads exported</div>
                     </div>
+                    <div className="text-[6px] text-gray-400 text-center mt-1">Includes company intel + scores</div>
                   </div>
                 </MiniPhone>
               </div>
@@ -311,39 +326,55 @@ export default function Home() {
   );
 }
 
-/* Phone mockup — hero size */
+/* Phone mockup — hero size (iPhone-like proportions) */
 function PhoneMockup({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative w-[280px]">
-      {/* Phone frame */}
-      <div className="bg-gray-900 rounded-[2.5rem] p-3 shadow-2xl shadow-gray-900/20">
-        {/* Notch */}
-        <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-5 bg-gray-900 rounded-b-2xl z-10" />
+      {/* Phone body */}
+      <div className="bg-[#1d1d1f] rounded-[3rem] p-[10px] shadow-[0_25px_60px_-12px_rgba(0,0,0,0.35)]">
+        {/* Dynamic Island */}
+        <div className="absolute top-[18px] left-1/2 -translate-x-1/2 w-[90px] h-[28px] bg-[#1d1d1f] rounded-full z-10" />
+        {/* Side button accents */}
+        <div className="absolute -right-[2px] top-[120px] w-[3px] h-[50px] bg-[#2d2d2f] rounded-r" />
+        <div className="absolute -left-[2px] top-[100px] w-[3px] h-[30px] bg-[#2d2d2f] rounded-l" />
+        <div className="absolute -left-[2px] top-[145px] w-[3px] h-[50px] bg-[#2d2d2f] rounded-l" />
+        <div className="absolute -left-[2px] top-[200px] w-[3px] h-[50px] bg-[#2d2d2f] rounded-l" />
         {/* Screen */}
-        <div className="bg-white rounded-[2rem] overflow-hidden min-h-[420px]">
+        <div className="bg-white rounded-[2.25rem] overflow-hidden min-h-[540px]">
           {/* Status bar */}
-          <div className="h-10 bg-white flex items-end justify-between px-6 pb-1">
-            <span className="text-[10px] font-semibold text-gray-900">9:41</span>
-            <div className="flex gap-1 items-center">
-              <div className="w-3.5 h-2 border border-gray-900 rounded-sm relative">
-                <div className="absolute inset-0.5 bg-gray-900 rounded-[1px]" style={{ width: "60%" }} />
+          <div className="h-12 bg-white flex items-end justify-between px-7 pb-1">
+            <span className="text-[11px] font-semibold text-gray-900">9:41</span>
+            <div className="flex gap-1.5 items-center">
+              <svg className="w-3.5 h-3.5 text-gray-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3C7.5 3 3.4 5 1 8.2l2.2 2.2C5.2 7.8 8.4 6 12 6s6.8 1.8 8.8 4.4L23 8.2C20.6 5 16.5 3 12 3zm0 6c-2.7 0-5.2 1.1-7 2.9l2.2 2.2c1.2-1.3 3-2.1 4.8-2.1s3.6.8 4.8 2.1l2.2-2.2c-1.8-1.8-4.3-2.9-7-2.9zm0 6c-1.4 0-2.6.5-3.5 1.4L12 20l3.5-3.6c-.9-.9-2.1-1.4-3.5-1.4z"/></svg>
+              <div className="w-4 h-2.5 border border-gray-900 rounded-[3px] relative">
+                <div className="absolute inset-[2px] bg-gray-900 rounded-[1px]" style={{ width: "55%" }} />
+                <div className="absolute -right-[3px] top-[3px] w-[2px] h-[4px] bg-gray-900 rounded-r-sm" />
               </div>
             </div>
           </div>
           {children}
+          {/* Home indicator */}
+          <div className="flex justify-center py-2">
+            <div className="w-28 h-1 bg-gray-900 rounded-full opacity-20" />
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-/* Mini phone mockup — steps */
+/* Mini phone mockup — steps (taller, more realistic) */
 function MiniPhone({ children }: { children: React.ReactNode }) {
   return (
-    <div className="w-[140px]">
-      <div className="bg-gray-900 rounded-[1.25rem] p-1.5 shadow-lg shadow-gray-900/10">
-        <div className="bg-white rounded-[1rem] overflow-hidden min-h-[160px]">
+    <div className="w-[150px]">
+      <div className="bg-[#1d1d1f] rounded-[1.5rem] p-[5px] shadow-lg shadow-gray-900/15">
+        {/* Mini Dynamic Island */}
+        <div className="absolute left-1/2 -translate-x-1/2 mt-[2px] w-[40px] h-[10px] bg-[#1d1d1f] rounded-full z-10" />
+        <div className="bg-white rounded-[1.25rem] overflow-hidden min-h-[220px]">
           {children}
+          <div className="flex justify-center py-1.5">
+            <div className="w-12 h-0.5 bg-gray-900 rounded-full opacity-20" />
+          </div>
         </div>
       </div>
     </div>
