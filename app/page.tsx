@@ -25,35 +25,80 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 border border-accent/20 rounded-full text-xs text-accent font-medium mb-8">
-            <span className="w-1.5 h-1.5 bg-accent rounded-full" />
-            Invite-only beta
+      <section className="pt-28 pb-16 px-6 overflow-hidden">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="flex-1 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 border border-accent/20 rounded-full text-xs text-accent font-medium mb-8">
+              <span className="w-1.5 h-1.5 bg-accent rounded-full" />
+              Invite-only beta
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-foreground">
+              Capture leads in seconds,
+              <br />
+              <span className="text-accent">not minutes.</span>
+            </h1>
+            <p className="text-lg text-muted max-w-xl mx-auto lg:mx-0 mb-10">
+              Snap a photo of any business card or event badge. AI extracts the
+              contact, enriches company intel, scores the lead, and drafts your
+              follow-up — all before you leave the booth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+              <a
+                href="mailto:support@leadssnap.com?subject=LeadsSnap%20Invite%20Request"
+                className="h-12 px-8 bg-accent text-white font-semibold rounded-xl flex items-center justify-center hover:bg-accent/90 transition-colors text-base"
+              >
+                Request Invite
+              </a>
+              <a
+                href="#how-it-works"
+                className="h-12 px-8 bg-surface border border-border text-foreground font-medium rounded-xl flex items-center justify-center hover:border-accent/30 transition-colors text-base"
+              >
+                See how it works
+              </a>
+            </div>
           </div>
-          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-foreground">
-            Capture leads in seconds,
-            <br />
-            <span className="text-accent">not minutes.</span>
-          </h1>
-          <p className="text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-10">
-            Snap a photo of any business card or event badge. AI extracts the
-            contact, enriches company intel, scores the lead, and drafts your
-            follow-up — all before you leave the booth.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href="mailto:support@leadssnap.com?subject=LeadsSnap%20Invite%20Request"
-              className="h-12 px-8 bg-accent text-white font-semibold rounded-xl flex items-center justify-center hover:bg-accent/90 transition-colors text-base"
-            >
-              Request Invite
-            </a>
-            <a
-              href="#how-it-works"
-              className="h-12 px-8 bg-surface border border-border text-foreground font-medium rounded-xl flex items-center justify-center hover:border-accent/30 transition-colors text-base"
-            >
-              See how it works
-            </a>
+
+          {/* Hero phone mockup */}
+          <div className="flex-shrink-0 hidden sm:block">
+            <PhoneMockup>
+              {/* Scan screen */}
+              <div className="p-4">
+                <div className="text-base font-bold text-gray-900 mb-3">Scan Lead</div>
+                <div className="flex gap-1.5 mb-3">
+                  <div className="flex-1 h-7 bg-blue-600 rounded text-[10px] text-white flex items-center justify-center font-medium">Business Card</div>
+                  <div className="flex-1 h-7 bg-gray-100 rounded text-[10px] text-gray-500 flex items-center justify-center">Event Badge</div>
+                  <div className="flex-1 h-7 bg-gray-100 rounded text-[10px] text-gray-500 flex items-center justify-center">QR Code</div>
+                </div>
+                <div className="border-2 border-dashed border-gray-200 rounded-xl p-6 text-center mb-3">
+                  <div className="w-8 h-8 mx-auto mb-2 text-gray-300">
+                    <svg fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" /></svg>
+                  </div>
+                  <div className="text-xs font-medium text-gray-700">Upload a photo</div>
+                  <div className="text-[10px] text-gray-400 mt-0.5">Tap to choose from gallery</div>
+                </div>
+                {/* Fake enriched result preview */}
+                <div className="bg-gray-50 rounded-xl p-3 border border-gray-100">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] font-bold">JD</div>
+                    <div>
+                      <div className="text-xs font-semibold text-gray-900">Jane Doe</div>
+                      <div className="text-[10px] text-gray-500">VP Sales at Acme Corp</div>
+                    </div>
+                    <div className="ml-auto">
+                      <div className="w-6 h-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-[10px] font-bold">5</div>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-1.5">
+                    <div className="text-[9px] text-gray-400">Email</div>
+                    <div className="text-[9px] text-gray-700">jane@acme.com</div>
+                    <div className="text-[9px] text-gray-400">Industry</div>
+                    <div className="text-[9px] text-gray-700">SaaS / B2B</div>
+                    <div className="text-[9px] text-gray-400">Revenue</div>
+                    <div className="text-[9px] text-gray-700">$50M-$100M</div>
+                  </div>
+                </div>
+              </div>
+            </PhoneMockup>
           </div>
         </div>
       </section>
@@ -67,14 +112,18 @@ export default function Home() {
           <p className="text-muted text-center mb-14 max-w-xl mx-auto">
             From photo to qualified lead in under 10 seconds.
           </p>
-          <div className="grid sm:grid-cols-3 gap-8">
-            {/* Step 1 */}
+          <div className="grid sm:grid-cols-3 gap-10">
+            {/* Step 1 - Scan */}
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-5 bg-accent/10 rounded-2xl flex items-center justify-center">
-                <svg width="32" height="32" fill="none" stroke="#2563EB" strokeWidth="1.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z" />
-                </svg>
+              <div className="mb-6 flex justify-center">
+                <MiniPhone>
+                  <div className="p-2">
+                    <div className="bg-gray-800 rounded-lg aspect-[4/3] flex items-center justify-center mb-2">
+                      <div className="w-10 h-10 border-2 border-white/40 rounded-lg" />
+                    </div>
+                    <div className="h-5 bg-blue-600 rounded text-[8px] text-white flex items-center justify-center font-medium">Capture</div>
+                  </div>
+                </MiniPhone>
               </div>
               <div className="text-xs text-accent font-semibold uppercase tracking-wider mb-2">Step 1</div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">Scan</h3>
@@ -82,12 +131,27 @@ export default function Home() {
                 Snap a photo of a business card, event badge, or LinkedIn QR code. Works with your camera or photo gallery.
               </p>
             </div>
-            {/* Step 2 */}
+            {/* Step 2 - Enrich */}
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-5 bg-accent/10 rounded-2xl flex items-center justify-center">
-                <svg width="32" height="32" fill="none" stroke="#2563EB" strokeWidth="1.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456Z" />
-                </svg>
+              <div className="mb-6 flex justify-center">
+                <MiniPhone>
+                  <div className="p-2 space-y-1.5">
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[7px] font-bold">JD</div>
+                      <div>
+                        <div className="text-[8px] font-semibold text-gray-900">Jane Doe</div>
+                        <div className="text-[7px] text-gray-400">VP Sales</div>
+                      </div>
+                    </div>
+                    <div className="h-px bg-gray-100" />
+                    <div className="space-y-1">
+                      <div className="flex justify-between"><span className="text-[7px] text-gray-400">Industry</span><span className="text-[7px] text-gray-700">SaaS</span></div>
+                      <div className="flex justify-between"><span className="text-[7px] text-gray-400">Type</span><span className="text-[7px] text-gray-700">B2B</span></div>
+                      <div className="flex justify-between"><span className="text-[7px] text-gray-400">Revenue</span><span className="text-[7px] text-gray-700">$50M+</span></div>
+                      <div className="flex justify-between"><span className="text-[7px] text-gray-400">Score</span><span className="text-[7px] font-bold text-green-600">5/5</span></div>
+                    </div>
+                  </div>
+                </MiniPhone>
               </div>
               <div className="text-xs text-accent font-semibold uppercase tracking-wider mb-2">Step 2</div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">Enrich</h3>
@@ -95,12 +159,22 @@ export default function Home() {
                 AI fills in missing emails, LinkedIn profiles, and company intel — industry, revenue, business model. Then scores the lead against your ICP.
               </p>
             </div>
-            {/* Step 3 */}
+            {/* Step 3 - Export */}
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-5 bg-accent/10 rounded-2xl flex items-center justify-center">
-                <svg width="32" height="32" fill="none" stroke="#2563EB" strokeWidth="1.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
-                </svg>
+              <div className="mb-6 flex justify-center">
+                <MiniPhone>
+                  <div className="p-2 space-y-1.5">
+                    <div className="h-5 bg-blue-600 rounded text-[7px] text-white flex items-center justify-center font-medium gap-1">
+                      <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" /></svg>
+                      Export to Sheets
+                    </div>
+                    <div className="h-5 bg-gray-100 rounded text-[7px] text-gray-600 flex items-center justify-center font-medium">Save to Contacts</div>
+                    <div className="h-5 bg-gray-100 rounded text-[7px] text-gray-600 flex items-center justify-center font-medium">Draft Email</div>
+                    <div className="mt-1 bg-green-50 border border-green-200 rounded p-1">
+                      <div className="text-[7px] text-green-700 text-center">12 leads exported</div>
+                    </div>
+                  </div>
+                </MiniPhone>
               </div>
               <div className="text-xs text-accent font-semibold uppercase tracking-wider mb-2">Step 3</div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">Export</h3>
@@ -233,6 +307,45 @@ export default function Home() {
           </a>
         </div>
       </footer>
+    </div>
+  );
+}
+
+/* Phone mockup — hero size */
+function PhoneMockup({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="relative w-[280px]">
+      {/* Phone frame */}
+      <div className="bg-gray-900 rounded-[2.5rem] p-3 shadow-2xl shadow-gray-900/20">
+        {/* Notch */}
+        <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-5 bg-gray-900 rounded-b-2xl z-10" />
+        {/* Screen */}
+        <div className="bg-white rounded-[2rem] overflow-hidden min-h-[420px]">
+          {/* Status bar */}
+          <div className="h-10 bg-white flex items-end justify-between px-6 pb-1">
+            <span className="text-[10px] font-semibold text-gray-900">9:41</span>
+            <div className="flex gap-1 items-center">
+              <div className="w-3.5 h-2 border border-gray-900 rounded-sm relative">
+                <div className="absolute inset-0.5 bg-gray-900 rounded-[1px]" style={{ width: "60%" }} />
+              </div>
+            </div>
+          </div>
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* Mini phone mockup — steps */
+function MiniPhone({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="w-[140px]">
+      <div className="bg-gray-900 rounded-[1.25rem] p-1.5 shadow-lg shadow-gray-900/10">
+        <div className="bg-white rounded-[1rem] overflow-hidden min-h-[160px]">
+          {children}
+        </div>
+      </div>
     </div>
   );
 }
