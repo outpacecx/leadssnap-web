@@ -316,13 +316,13 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-4">
             <a
-              href="https://app.leadssnap.com/privacy"
+              href="/privacy"
               className="text-sm text-muted hover:text-foreground transition-colors"
             >
               Privacy Policy
             </a>
             <a
-              href="https://app.leadssnap.com/terms"
+              href="/terms"
               className="text-sm text-muted hover:text-foreground transition-colors"
             >
               Terms
