@@ -18,6 +18,13 @@ const config: Config = {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
       },
+      borderRadius: {
+        DEFAULT: "8px",
+        md: "10px",
+        lg: "14px",
+        xl: "20px",
+        "2xl": "28px",
+      },
     },
   },
   plugins: [],

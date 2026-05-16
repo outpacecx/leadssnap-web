@@ -6,6 +6,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@supports (corner-shape: squircle) {
+  [class*="rounded"]:not(.rounded-full) {
+    corner-shape: squircle;
+  }
+}
+
 body {
   background: #FFFFFF;
   color: #111111;
